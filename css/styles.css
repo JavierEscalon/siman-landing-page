@@ -1,0 +1,860 @@
+/* ------------------- */
+/* RESET BÁSICO Y VARIABLES */
+/* ------------------- */
+
+/* Un reseteo simple para empezar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definición de la paleta de colores y fuentes como variables */
+:root {
+    --color-primary: #E30613; /* Rojo Siman */
+    --color-dark: #212529;
+    --color-light: #FFFFFF;
+    --color-gray: #F8F9FA;
+    --border-color: #DEE2E6;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+a {
+    text-decoration: none;
+    color: inherit; /* Los enlaces heredan el color de su padre */
+}
+ul {
+    list-style-type: none; /* Quitamos los puntos de las listas */
+}
+img {
+    max-width: 100%;
+    display: block; /* Evita espacios extra debajo de las imágenes */
+}
+
+
+/* ----------------------------- */
+/* ESTILOS PARA PAGINA PRINCIPAL */
+/* ----------------------------- */
+
+
+/* ---------------------------- */
+/* ESTILOS DEL LAYOUT PRINCIPAL */
+/* ---------------------------- */
+
+
+/* ------------------- */
+/* HEADER */
+/* ------------------- */
+
+/* --- Estilos de la Barra de Promoción Superior --- */
+.top-banner {
+    background: linear-gradient(90deg, #330000, #ff0000, #aa0000, #330000); /* Simula el brillo rojo */
+    background-size: 300% 100%;
+    animation: gradient-animation 5s ease-in-out infinite;
+    text-align: center;
+    border-radius: 10px; /* Bordes totalmente redondeados */
+    margin: 0 auto; /* Centra el contenido en la página */
+    margin-top: 0.5rem; /* Espacio entre la navegación y el banner */
+    margin-bottom: 0.5rem; /* Espacio entre el banner y el contenido siguiente */
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    max-width: 1280px;
+    padding: 0.5rem 1rem;
+}
+.top-banner p {
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+/* Animación para el brillo del banner */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-header {
+    background-color: #a13c3b; /* Color vino/rojizo del header */
+    padding: 0.5rem 5%; /* Ajustamos el padding */
+}
+.main-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header .logo img {
+    height: 20px; /* Ajustamos la altura */
+    margin-right: 15px;
+}
+/* Contenedor de la barra de búsqueda */
+.search-bar {
+    flex-grow: 1;
+    margin: 0 2rem;
+    position: relative; /* Clave para posicionar el ícono dentro */
+}
+/* Ícono de búsqueda dentro de la barra */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #e0e0e0;
+}
+/* Input de la barra de búsqueda */
+.search-bar input {
+    width: 80%;
+    padding: 0.55rem 1rem 0.55rem 35px; /* Padding izquierdo para no solapar el ícono */
+    border: none;
+    border-radius: 12px;
+    background-color: #6d2929; /* Tono más oscuro del mismo color */
+    color: white; /* Color del texto que se escribe */
+    font-size: 1.1rem;
+}
+/* Placeholder (texto "Buscar") */
+.search-bar input::placeholder {
+    color: #e0e0e0; /* Color del texto placeholder */
+    opacity: 1;
+}
+/* Opciones de usuario */
+.user-options {
+    display: flex;
+    gap: 1.5rem;
+}
+.user-options a {
+    color: white; /* Íconos en color blanco */
+    font-size: 1.3rem; /* Tamaño de los íconos */
+    transition: color 0.3s ease;
+}
+.user-options a:hover {
+    color: #f0f0f0;
+}
+
+/* ------------------- */
+/* NAVEGACION PRINCIPAL */
+/* ------------------- */
+
+.main-nav {
+    background-color: #f8f9fa; /* Un gris muy claro como en la imagen */
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 5%;
+}
+.main-nav ul {
+    display: flex;
+    align-items: center; /* Alinea verticalmente todos los items */
+    width: 100%;
+    padding: 0.5rem 0; /* Un poco de espacio vertical */
+}
+/* Estilos generales para los enlaces de la navegación */
+.main-nav ul a {
+    display: flex; /* Hacemos el link un contenedor flex */
+    align-items: center; /* Alineamos su ícono y texto internos */
+    gap: 0.5rem; /* Espacio entre el ícono y el texto */
+    padding: 0; /* Quitamos el padding anterior para un control más fino */
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-dark);
+    transition: color 0.3s ease;
+}
+.main-nav ul a:hover {
+    color: var(--color-primary);
+}
+/* Departamentos" */
+.nav-departamentos a {
+    font-family: var(--font-heading); /* Fuente de encabezado */
+    font-weight: 900; /* Texto grueso */
+    font-size: 1.9rem; /* Un poco más grande */
+    color: #000000
+}
+/* Servicios */
+.nav-servicios a {
+    font-size: 1.9rem; /* Mismo tamaño que Departamentos */
+}
+/* espacio extra despues  de Servicios */
+.nav-servicios {
+    margin-right: 1.1rem;  /* Espacio extra a su derecha */
+    margin-left: auto;
+}
+/* Estilo para el separador */
+.nav-separator {
+    color: #ced4da; /* Un color gris claro para el separador */
+    font-size: 1.2rem;
+    margin-right: 1.2rem;
+}
+/* Espaciado para los elementos de la derecha */
+.nav-servicios, .main-nav li:not(.nav-departamentos):not(.nav-separator) {
+    margin-right: 1.5rem;
+}
+
+
+/* ------------------- */
+/* CONTENEDOR PRINCIPAL */
+/* ------------------- */
+
+main {
+    max-width: 1300px;
+    margin: 0 auto; /* Centra el contenido en la página */
+    padding: 0 1rem;
+}
+
+/* --- Estilo para el Banner Principal 'Crazy Week' --- */
+.promo-banner-main {
+    margin-top: 0.7rem; /* Espacio entre la navegación y el banner */
+    margin-bottom: 0.07rem; /* Espacio entre el banner y el contenido siguiente */
+}
+.promo-banner-main img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    height: 55px;
+    border-radius: 10px; /* Bordes redondeados */
+    display: block; /* Evita espacios extra */
+}
+
+/* --- Estilos para la Sección de Producto DestacadO --- */
+.featured-product {
+    margin: 0.7rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+/* Contenedor del banner */
+.featured-banner {
+    border-radius: 10px;
+    overflow: hidden; /* Importante para que la imagen respete los bordes redondeados */
+    line-height: 1; /* Soluciona un posible espacio extra debajo de la imagen */
+}
+/* La imagen dentro del banner */
+.featured-banner img {
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+}
+/* Barra inferior con el título (sin cambios) */
+.featured-info-bar {
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    margin-top: -30px; 
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    ;
+}
+.featured-info-bar h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin: 0;
+}
+.featured-info-bar p {
+    margin: 1px;
+    color: #6c757d;
+}
+.featured-info-bar .title-group{
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+.featured-info-bar .title-group:hover h3,
+.featured-info-bar .title-group:hover p{ /* El efecto hover se aplica al contenedor padre */
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+.featured-info-bar h3,
+.featured-info-bar p{ /* Transición suave */
+    transition: color 0.3s ease;
+}
+
+
+/* --- Estilos para la sección de categorías con iconos --- */
+.icon-categories {
+    margin: 1rem 0;
+}
+.icon-categories .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.icon-categories .section-title h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+.icon-categories .section-title a {
+    color: var(--color-dark);
+}
+.icon-categories .section-title:hover a {
+    color: var(--color-dark);
+    text-decoration: underline;
+}
+/* Contenedor principal de los íconos */
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que los íconos se ajusten en pantallas pequeñas */
+}
+/* Cada item individual */
+.icon-item {
+    text-align: center;
+    max-width: 120px; /* Ancho máximo para cada ítem */
+}
+.icon-item a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+/* El círculo que contiene la imagen */
+.icon-image-wrapper {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0.5rem; /* Centra el círculo y le da espacio abajo */
+    transition: transform 0.3s ease;
+}
+.icon-image-wrapper img {
+    max-width: 100%;  /* Controla el tamaño de la imagen dentro del circulo */
+    max-height: 100%;
+    object-fit: cover; /*fuerza la imagen cuadrada a llenar por completo el círculo */
+}
+.icon-item p {
+    transition: color 0.3s ease;
+}
+.icon-item a:hover .icon-image-wrapper{
+    transform: scale(1.1); /* Un escalado sutil*/
+}
+.icon-item a:hover p {
+    text-decoration: underline;
+    color: var(--color-dark);
+}
+/* Clases para los colores de fondo */
+.bg-red {
+    background-color: #E30613;
+}
+.bg-lavender {
+    background-color: #c9cad7;
+}
+
+
+
+/* --- Estilos para la Sección de Exhibición en Grid --- */
+.showcase-grid {
+    margin: 2rem 0;
+}
+/* Contenedor principal que define las dos columnas */
+.showcase-container {
+    display: grid;                  /* IMPORTANTE: Activa el layout de grid */
+    grid-template-columns: 1fr 2fr; /* CRÍTICO: Crea la columna izq. (1fr) y der. (2fr) */
+    gap: 20px;                      /* Espacio entre las columnas */
+}
+/* El contenedor de la columna derecha, que es un grid anidado */
+.grid-right-column {
+    display: grid;                  /* IMPORTANTE: Activa el grid para las 4 tarjetas */
+    grid-template-columns: 1fr 1fr; /* CRÍTICO: Crea las dos columnas para las tarjetas */
+    gap: 20px;                      /* Espacio entre las tarjetas */
+}
+/* Estilo para el item (que ahora es una etiqueta <a>) */
+.grid-item-large,
+.grid-item-small {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; 
+    color: inherit;
+    transition: box-shadow 0.3s ease;
+}
+/* La imagen dentro del enlace */
+.grid-item-large img,
+.grid-item-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+/* Información de texto */
+.item-info {
+    background: white;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+.item-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-heading);
+    transition: color 0.3s ease;
+}
+.item-info p {
+    margin: 0;
+    color: #6c757d;
+}
+/* --- efecto hover unificados --- */
+.grid-item-large:hover,
+.grid-item-small:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.grid-item-large:hover img,
+.grid-item-small:hover img {
+    transform: scale(1.05);
+}
+.grid-item-large:hover h3,
+.grid-item-small:hover h3 {
+    color: var(--color-primary);
+}
+
+
+/* ------------------- */
+/* ESTILOS DE COMPONENTES */
+/* ------------------- */
+
+/* Cuadricula de Categorías, usando CSS Grid */
+.category-grid {
+    text-align: center;
+    margin-top: 1rem;
+}
+.category-grid h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 1.5rem; /* Espacio entre los cards */
+}
+.category-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    transition: box-shadow 0.3s ease;
+}
+.category-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra al pasar el mouse */
+    text-decoration: underline;
+    color: var(--color-dark);
+}
+.category-card p {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.product-promo h2 {
+    margin: 2rem 0;
+}
+
+/* ------------------- */
+/* ESTILOS DEL FOOTER */
+/* ------------------- */
+
+.main-footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 3rem 5%;
+    margin-top: 3rem;
+}
+.main-footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.main-footer h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: var(--color-light);
+}
+.main-footer a:hover {
+    text-decoration: underline;
+}
+.main-footer .footer-column li {
+    margin-bottom: 0.5rem;
+}
+.main-footer .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #495057;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* ------------------- */
+/* MEDIA QUERIES (DISEÑO RESPONSIVO) */
+/* ------------------- */
+
+/* ----- Breakpoint para Tabletas (y pantallas más pequeñas) ----- */
+@media (max-width: 992px) {
+    
+    /* Hacemos la cuadrícula de categorías de 2 columnas en lugar de 4 */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hacemos la cuadrícula del footer de 2 columnas */
+    .main-footer .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Ajustamos los paddings generales */
+    .main-header .header-content, .main-nav {
+        padding: 1rem 3%;
+    }
+}
+
+
+/* ----- Breakpoint para Móviles (y pantallas más pequeñas) ----- */
+@media (max-width: 768px) {
+    
+    /* --- Ajustes al Header --- */
+    .main-header .header-content {
+        flex-direction: column; /* Apilamos los elementos del header */
+        gap: 1rem;
+    }
+
+    .main-header .search-bar {
+        order: 3; /* Ponemos la barra de búsqueda al final */
+        width: 100%;
+        margin: 0;
+    }
+    
+    .main-header .logo {
+        order: 1;
+    }
+    
+    .main-header .user-options {
+        order: 2;
+    }
+
+    /* --- Menú de navegación para movil --- */
+    .main-nav ul {
+        flex-direction: column; /* Apilamos los enlaces */
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    /* --- Ajustes al Contenido Principal --- */
+    main {
+        padding: 1rem;
+    }
+
+    /* La cuadrícula de categorías ahora es de 1 sola columna */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid h2 {
+        font-size: 1.5rem;
+    }
+
+    /* --- Ajustes al Footer --- */
+    /* El footer ahora es de 1 sola columna */
+    .main-footer .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+
+
+/* ------------------- */
+/* PAGINA DE FORMULARIO DE CONTACTO */
+/* ------------------- */
+
+/* ------------------- */
+/* ESTILOS DEL FORMULARIO DE CONTACTO */
+/* ------------------- */
+
+.contact-section {
+    padding: 2.5rem 0;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario */
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #c00511; /* Un rojo un poco más oscuro */
+}
+
+
+/* ------------------- */
+/* ESTILOS DEL FORMULARIO DE CONTACTO */
+/* ------------------- */
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario */
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #c00511; /* Un rojo un poco más oscuro */
+}
+
+
+/* --------------------------------------- */
+/* --- Estilos para pagina promociones --- */
+/* --------------------------------------- */
+
+/* --- Estilos para la Sección de Grid de Productos --- */
+.product-grid-section {
+    margin: 3rem 0;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.slider-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.slider-header a {
+    color: var(--color-dark);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Contenedor del Grid */
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Tarjeta de producto individual */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Necesario para las etiquetas */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color de texto normal */
+    transition: box-shadow 0.3s ease; /* Transición para la sombra */
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-info {
+    padding: 1rem;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info .brand {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.product-info .title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
+    min-height: 40px; 
+    flex-grow: 1; /* Empuja los precios y el botón hacia abajo */
+    transition: transform 0.3s ease;
+}
+
+.product-info .vendor {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Sección de precios */
+.price-section {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.price-section .original-price {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.price-section .sale-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.discount-badge {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.product-info .installments {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* Botón de Agregar al carrito */
+.add-to-cart-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; /* Empuja el botón al fondo de .product-info */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* --- Estilos para etiquetas adicionales --- */
+
+.card-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    display: flex;
+    gap: 5px;
+}
+
+.card-badges .badge {
+    background-color: #343a40;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-limited {
+    display: inline-block;
+    background-color: #e7f1ff;
+    color: #0056b3;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.discount-badge-blue {
+    background-color: #0056b3;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- efecto hover unificado --- */
+.product-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.product-card:hover img {
+    transform: scale(1.03);
+}
+.product-card:hover .title {
+    color: var(--color-primary);
+}
+.product-card:hover .add-to-cart-btn {
+    background-color: #c00511; /* Rojo más oscuro */
+}
+
+/* --- haciendo el grid responsivo --- */
+
+@media (max-width: 1200px) {
+    .product-grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
+}
+@media (max-width: 992px) {
+    .product-grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+@media (max-width: 768px) {
+    .product-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}

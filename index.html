@@ -8,68 +8,266 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/siman-logo.svg" alt="Logo Siman"> </a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar">
-            </div>
-            <div class="user-options">
-                <a href="#">👤</a>
-                <a href="#">🛒</a>
-            </div>
+
+<div class="top-banner">
+    <p>COMPRA AQUÍ HASTA 48 CUOTAS O 12 MESES SIN INTERESES*</p>
+</div>
+
+<header class="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/siman-logo.svg" alt="Logo Siman"> 
+            </a>
         </div>
-    </header>
+        
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Buscar">
+        </div>
+
+        <div class="user-options">
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+</header>
 
     <nav class="main-nav">
         <ul>
-            <li><a href="index.html">Departamentos</a></li>
+            <li class="nav-departamentos">
+                <a href="index.html"><i class="fa-solid fa-bars"></i>Departamentos</a></li>
+            <li class="nav-servicios">
+                <a href="#"><i class="fa-solid fa-circle-check"></i>Servicios</a></li>
+            <li class="nav-separator">|</li>
             <li><a href="promociones.html">Rebajas</a></li>
+            <li><a href="#">Aires acondicionados</a></li>
+            <li><a href="#">Exclusivo online</a></li>
+            <li><a href="#">Zapatos</a></li>
+            <li><a href="#">Celulares</a></li>
             <li><a href="#">Tecnología</a></li>
-            <li><a href="#">Hogar</a></li>
+            <li><a href="#">Belleza</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
+
     <main>
-        <section class="hero-section">
-            <img src="images/crazy-week-banner.jpg" alt="Promoción Crazy Week con hasta 35% de descuento" style="width:100%;">
+
+
+        <section class="promo-banner-main">
+            <a href="#">
+                <img src="images/header-crazy-week-banner.gif" alt="Banner de promoción Crazy Week">
+            </a>
         </section>
+
+
+        <section class="featured-product">
+            <a href="#">
+            <div class="featured-banner">
+                <img src="images/crazy-week-banner.gif" alt="Oferta Crazy Week en Zapatos">
+            </div>
+            </a>
+
+            <div class="featured-info-bar">
+                <div class="title-group">
+                    <a href="#"><h3>Zapatos</h3></a>
+                    <a href="#"><p>Deportivos, casuales y más</p></a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="icon-categories">
+            
+            <div class="section-title">
+                <h4>Categorías que te encantan | <a href="#">Ver condiciones de ofertas</a></h4>
+            </div>
+
+            <div class="icons-container">
+                
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-red">
+                            <img src="images/cat-moda.jpg" alt="Rebajas moda">
+                        </div>
+                        <p>Rebajas moda</p>
+                    </a>
+                </div>
+
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-red">
+                            <img src="images/cat-tecno.jpg" alt="Rebajas Tecnología">
+                        </div>
+                        <p>Rebajas Tecnología</p>
+                    </a>
+                </div>
+
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-lavender">
+                            <img src="images/cat-fragancias.jpg" alt="Fragancias">
+                        </div>
+                        <p>Fragancias</p>
+                    </a>
+                </div>
+
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-lavender">
+                            <img src="images/cat-aires.jpg" alt="Aires acondicionados">
+                        </div>
+                        <p>Aires acondicionados</p>
+                    </a>
+                </div>
+
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-lavender">
+                            <img src="images/cat-relojes.jpg" alt="Relojes">
+                        </div>
+                        <p>Relojes</p>
+                    </a>
+                </div>
+
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-lavender">
+                            <img src="images/cat-enseres.gif" alt="Pequeños enseres">
+                        </div>
+                        <p>Pequeños enseres</p>
+                    </a>
+                </div>
+                
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-lavender">
+                            <img src="images/cat-motos.jpg" alt="Motocicletas">
+                        </div>
+                        <p>Motocicletas</p>
+                    </a>
+                </div>
+
+                <div class="icon-item">
+                    <a href="#">
+                        <div class="icon-image-wrapper bg-lavender">
+                            <img src="images/cat-credisiman.gif" alt="Favoritos Credisiman">
+                        </div>
+                        <p>Favoritos Credisiman</p>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="showcase-grid">
+            <div class="showcase-container">
+                
+                <a href="#" class="grid-item-large">
+                    <img src="images/grid-hogar.jpg" alt="Hogar y decoración">
+                    <div class="item-info">
+                        <h3>Hogar</h3>
+                        <p>Edredones, decoración y más</p>
+                    </div>
+                </a>
+
+                <div class="grid-right-column">
+                    
+                    <a href="#" class="grid-item-small">
+                        <img src="images/grid-moda-mujer.jpg" alt="Moda para mujer">
+                        <div class="item-info">
+                            <h3>Moda para mujer</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="grid-item-small">
+                        <img src="images/grid-ropa-hombre.jpg" alt="Ropa de hombre">
+                        <div class="item-info">
+                            <h3>Ropa de hombre</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="grid-item-small">
+                        <img src="images/grid-ninos.jpg" alt="Niños y bebés">
+                        <div class="item-info">
+                            <h3>Niños y bebés</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="grid-item-small">
+                        <img src="images/grid-accesorios.jpg" alt="Accesorios">
+                        <div class="item-info">
+                            <h3>Accesorios</h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-product">
+            <a href="#">
+            <div class="featured-banner">
+                <img src="images/crazy-week-banner2.webp" alt="Oferta Crazy Week en Zapatos">
+            </div>
+            </a>
+
+            <div class="featured-info-bar">
+                <div class="title-group">
+                    <a href="#"><h3>Pantallas</h3></a>
+                </div>
+            </div>
+        </section>
+
 
         <section class="category-grid">
             <h2>Nuestras Categorías</h2>
             <div class="grid-container">
                 <div class="category-card">
-                    <img src="images/cat-moda.jpg" alt="Moda para mujer">
-                    <p>Moda para mujer</p>
+                    <a href="#">
+                    <img src="images/cat-deportiva.jpg" alt="Moda para mujer">
+                    <p>Ropa deportiva</p>
+                    </a>
                 </div>
                 <div class="category-card">
+                    <a href="#">
                     <img src="images/cat-hogar.jpg" alt="Esenciales del hogar">
                     <p>Esenciales del hogar</p>
+                    </a>
                 </div>
                 <div class="category-card">
-                    <img src="images/cat-tecno.jpg" alt="Accesorios de tecnología">
-                    <p>Tecnología</p>
+                    <a href="#">
+                    <img src="images/cat-bebes.gif" alt="Accesorios de tecnología">
+                    <p>Muebles para bebé</p>
+                    </a>
                 </div>
                 <div class="category-card">
+                    <a href="#">
                     <img src="images/cat-camas.jpg" alt="Camas y colchones">
                     <p>Camas y colchones</p>
+                    </a>
                 </div>
             </div>
         </section>
 
+
         <section class="product-promo">
             <h2>Ofertas que no te puedes perder</h2>
             </section>
+
+
     </main>
+
 
     <footer class="main-footer">
         <div class="footer-content">
